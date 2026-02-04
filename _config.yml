@@ -24,12 +24,12 @@ paginate_path: "/page/:num/"
 # Exclude from processing
 exclude:
   - README.md
+  - JEKYLL-ENHANCEMENTS.md
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
   - LICENSE
-  - "*.md"
 
 # Plugins
 plugins:

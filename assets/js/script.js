@@ -160,4 +160,3 @@ console.log('🏌️ Masters-inspired blog features loaded');
 console.log('✓ Green Jacket scroll progress');
 console.log('✓ Reading progress bar');
 console.log('✓ Rolling hills parallax');
-console.log('✓ Contour map background');
