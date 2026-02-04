@@ -51,35 +51,11 @@ a {
 
 .sidebar {
   padding: 36px 28px;
-  background:
-    linear-gradient(145deg, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
-    linear-gradient(180deg, var(--masters-green) 0%, var(--pine-deep) 100%);
+  background: linear-gradient(180deg, var(--masters-green) 0%, var(--pine-deep) 100%);
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 28px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Subtle pine texture overlay */
-.sidebar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.02) 2px, rgba(255,255,255,0.02) 4px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Ensure sidebar content is above the overlay */
-.sidebar > * {
-  position: relative;
-  z-index: 1;
 }
 
 .brand {
@@ -91,6 +67,9 @@ a {
 .badge {
   width: 46px;
   height: 46px;
+  min-width: 46px;
+  min-height: 46px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-shine) 100%);
   color: var(--masters-green);
@@ -98,7 +77,8 @@ a {
   place-items: center;
   font-weight: 700;
   font-family: "Fraunces", serif;
-  font-size: 20px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
   box-shadow:
     0 4px 12px rgba(212, 175, 55, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -159,9 +139,10 @@ a {
 }
 
 .nav a.active::before {
-  content: '⚑ ';
+  content: '⚑';
   color: var(--gold);
   font-size: 14px;
+  margin-right: 8px;
 }
 
 .side-note {
@@ -427,32 +408,6 @@ body.scrolled::before {
   will-change: transform;
 }
 
-/* Animated contour map background */
-@keyframes contour-drift {
-  0% {
-    transform: translateX(-50%) translateY(-50%);
-  }
-  100% {
-    transform: translateX(-45%) translateY(-55%);
-  }
-}
-
-.content::before {
-  content: '';
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background-image:
-    radial-gradient(ellipse 800px 400px at 30% 50%, transparent 39%, var(--mist) 40%, var(--mist) 40.5%, transparent 41%),
-    radial-gradient(ellipse 1000px 500px at 70% 30%, transparent 49%, rgba(15, 61, 46, 0.03) 50%, rgba(15, 61, 46, 0.03) 50.5%, transparent 51%),
-    radial-gradient(ellipse 1200px 600px at 40% 70%, transparent 59%, var(--morning-mist) 60%, var(--morning-mist) 60.5%, transparent 61%);
-  opacity: 0.4;
-  z-index: -1;
-  animation: contour-drift 60s ease-in-out infinite alternate;
-  pointer-events: none;
-}
 
 /* Scorecard stats panel */
 .scorecard {
@@ -544,11 +499,5 @@ input:focus-visible {
 
   .scorecard-number {
     font-size: 24px;
-  }
-
-  /* Simplify contour animation on mobile */
-  .content::before {
-    animation: none;
-    opacity: 0.2;
   }
 }

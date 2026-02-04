@@ -1,0 +1,17 @@
+<aside class="sidebar">
+  <div class="brand">
+    <div class="badge">DS</div>
+    <div>
+      <div class="title">{{ site.title }}</div>
+      <div class="subtitle">{{ site.subtitle }}</div>
+    </div>
+  </div>
+  <nav class="nav">
+    {% for item in site.navigation %}
+      <a {% if page.url == item.url %}class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    {% endfor %}
+  </nav>
+  <div class="side-note">
+    {{ site.description }}
+  </div>
+</aside>

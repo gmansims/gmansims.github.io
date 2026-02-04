@@ -1,0 +1,64 @@
+# Site settings
+title: The Dad Stack
+subtitle: Learning to code as a new Dad—one nap at a time
+description: One dad's journey into the world of coding, sharing insights and lessons learned along the way.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://gmansims.github.io" # the base hostname & protocol for your site
+author: gmansims
+email: hello@example.com
+
+# Build settings
+markdown: kramdown
+permalink: /posts/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - JEKYLL-ENHANCEMENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - LICENSE
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Front matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "gmansims"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Site navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+  - title: Topics
+    url: /topics/
+  - title: Archive
+    url: /archive/
