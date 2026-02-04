@@ -1,91 +1,37 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Dad Stack</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <aside class="sidebar">
-        <div class="brand">
-          <div class="badge">M</div>
-          <div>
-            <div class="title">The Dad Stack</div>
-            <div class="subtitle">Learning to code as a new Dad—one nap at a time</div>
-          </div>
-        </div>
-        <nav class="nav">
-          <a class="active" href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="topics.html">Topics</a>
-          <a href="archive.html">Archive</a>
-        </nav>
-        <div class="side-note">
-          One dad's journey into the world of coding, sharing insights and lessons learned along the way.
-        </div>
-      </aside>
+---
+layout: default
+---
 
-      <main class="content">
-        <header class="hero">
-          <h1>Recent Posts</h1>
-          <p>
-            Latest posts from the blog, covering everything from coding challenges to parenting hacks. Dive in and explore the journey!
-          </p>
-        </header>
+<header class="hero">
+  <h1>Recent Posts</h1>
+  <p>
+    Latest posts from the blog, covering everything from coding challenges to parenting hacks. Dive in and explore the journey!
+  </p>
+</header>
 
-        <div class="scorecard">
-          <div class="scorecard-item">
-            <div class="scorecard-number">24</div>
-            <div class="scorecard-label">Articles</div>
-          </div>
-          <div class="scorecard-item">
-            <div class="scorecard-number">6</div>
-            <div class="scorecard-label">Topics</div>
-          </div>
-          <div class="scorecard-item">
-            <div class="scorecard-number">2.5k</div>
-            <div class="scorecard-label">Readers</div>
-          </div>
-        </div>
+<div class="scorecard">
+  <div class="scorecard-item">
+    <div class="scorecard-number">{{ site.posts | size }}</div>
+    <div class="scorecard-label">Articles</div>
+  </div>
+  <div class="scorecard-item">
+    <div class="scorecard-number">{% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq %}{{ categories | size }}</div>
+    <div class="scorecard-label">Topics</div>
+  </div>
+  <div class="scorecard-item">
+    <div class="scorecard-number">0</div>
+    <div class="scorecard-label">Readers</div>
+  </div>
+</div>
 
-        <section class="post-list">
-<!--          <article class="post">
-            <div class="meta">Feb 3, 2026 · 6 min read</div>
-            <h2><a href="article1.html">The Green Jacket Effect: Consistency Over Time</a></h2>
-            <p>
-              Why small daily improvements compound faster than bold, sporadic swings.
-            </p>
-          </article>
-
-          <article class="post">
-            <div class="meta">Jan 28, 2026 · 4 min read</div>
-            <h2><a href="article2.html">A Clean Scorecard for Projects</a></h2>
-            <p>
-              A lightweight framework to keep goals, constraints, and outcomes visible.
-            </p>
-          </article>
-
-          <article class="post">
-            <div class="meta">Jan 15, 2026 · 5 min read</div>
-            <h2><a href="article3.html">Fairways and Focus: Deep Work in Short Blocks</a></h2>
-            <p>
-              Designing your week so attention stays on the fairway, not the rough.
-            </p>
-          </article>
--->
-          <article class="post">
-            <div class="meta">Feb 3, 2026 · 7 min read</div>
-            <h2><a href="article4.html">Hello World</a></h2>
-            <p>
-              A New Dad's First Steps in Coding
-            </p>
-          </article>
-        </section>
-      </main>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+<section class="post-list">
+  {% for post in site.posts limit:10 %}
+    <article class="post">
+      <div class="meta">{{ post.date | date: "%b %-d, %Y" }} · {{ post.read_time }}</div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>
+        {{ post.excerpt | strip_html | truncate: 120 }}
+      </p>
+    </article>
+  {% endfor %}
+</section>
