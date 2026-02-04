@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: ./_site
+          arguments: |
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/localhost/"
+            --ignore-missing-alt
+            --allow-missing-href
+        continue-on-error: true
+
+  claude-review:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Claude Code Review
+        uses: anthropics/claude-code-action@beta
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          model: claude-sonnet-4-20250514
+          direct_prompt: |
+            Review this pull request for a Jekyll blog. Check for:
+            - HTML/CSS issues
+            - Broken links or references
+            - Accessibility concerns
+            - Any obvious bugs or typos
+            Provide concise, actionable feedback.
