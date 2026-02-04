@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-02-03T22:52:09-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Dad Stack</title><subtitle>One dad&apos;s journey into the world of coding, sharing insights and lessons learned along the way.</subtitle><author><name>gmansims</name></author><entry><title type="html">The Green Jacket Effect: Consistency Over Time</title><link href="http://localhost:4000/posts/green-jacket-effect/" rel="alternate" type="text/html" title="The Green Jacket Effect: Consistency Over Time" /><published>2026-02-03T00:00:00-05:00</published><updated>2026-02-03T00:00:00-05:00</updated><id>http://localhost:4000/posts/green-jacket-effect</id><content type="html" xml:base="http://localhost:4000/posts/green-jacket-effect/"><![CDATA[<p>In golf, winning the Masters isn’t about one perfect swing. It’s about making fewer mistakes than everyone else over four days. The green jacket goes to the player who can repeat good decisions, round after round, hole after hole.</p>
+
+<p>This principle applies far beyond Augusta National. In work, in creative pursuits, in building anything meaningful—consistency compounds faster than sporadic brilliance.</p>
+
+<h2 id="small-improvements-compound">Small Improvements Compound</h2>
+
+<p>Consider a golfer who improves their putting accuracy by just 1% each week. After a year, they’re not 52% better—they’re exponentially better. Each small gain builds on the previous ones, creating a foundation that supports further growth.</p>
+
+<p>The same mathematics apply to your craft. A developer who writes slightly cleaner code each day, a designer who refines their process incrementally, a writer who improves their clarity word by word—these small, consistent improvements create dramatic results over time.</p>
+
+<h2 id="the-danger-of-bold-swings">The Danger of Bold Swings</h2>
+
+<p>There’s a temptation to make big, dramatic changes. To completely overhaul your workflow. To learn five new technologies at once. To rewrite everything from scratch.</p>
+
+<p>But bold swings often lead to the rough. They introduce risk, create instability, and frequently result in abandoned efforts. The golfer who tries to drive the green on a par 5 often ends up in the water.</p>
+
+<p>Instead, play for position. Make the safe shot that sets up the next one. Build systems that allow for incremental improvement rather than requiring heroic effort.</p>
+
+<h2 id="building-a-consistency-practice">Building a Consistency Practice</h2>
+
+<p>Here’s what consistency looks like in practice:</p>
+
+<ul>
+  <li>Ship small improvements daily rather than waiting for the perfect release</li>
+  <li>Refactor one function well instead of rushing through many</li>
+  <li>Write 200 words of clear documentation instead of 2000 words of confusion</li>
+  <li>Review one pull request thoroughly rather than skimming ten</li>
+  <li>Learn one concept deeply instead of collecting superficial knowledge</li>
+</ul>
+
+<p>The green jacket doesn’t go to the player with the longest drive. It goes to the one who can shoot par, day after day, under pressure, when it matters most.</p>
+
+<h2 id="when-consistency-becomes-second-nature">When Consistency Becomes Second Nature</h2>
+
+<p>Eventually, consistent practice becomes automatic. You don’t think about making good decisions—you just make them. Your baseline rises. What once required conscious effort becomes your natural approach.</p>
+
+<p>This is the green jacket effect: the compound interest of showing up, doing the work, and trusting the process. Not every day will feel significant. But over time, the results speak for themselves.</p>]]></content><author><name>gmansims</name></author><category term="consistency" /><category term="habits" /><summary type="html"><![CDATA[Why small daily improvements compound faster than bold, sporadic swings.]]></summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/posts/hello-world/" rel="alternate" type="text/html" title="Hello World" /><published>2026-02-03T00:00:00-05:00</published><updated>2026-02-03T00:00:00-05:00</updated><id>http://localhost:4000/posts/hello-world</id><content type="html" xml:base="http://localhost:4000/posts/hello-world/"><![CDATA[<p>Note, this is under construction. Coming soon!</p>
+
+<p>This practice isn’t glamorous. There’s no gallery watching. No leaderboard. No prize money. But without it, championship golf would be impossible.</p>
+
+<h2 id="practice-vs-performance">Practice vs. Performance</h2>
+
+<p>In work, we often blur the line between practice and performance. Every commit is production code. Every design is for a real project. Every decision has immediate consequences.</p>
+
+<p>This creates two problems:</p>
+
+<ol>
+  <li>We never get better because we’re always performing</li>
+  <li>Performance suffers because we haven’t practiced enough</li>
+</ol>
+
+<p>Professionals in any field separate these modes. Musicians practice scales. Athletes drill fundamentals. Writers do morning pages. The practice isn’t the performance—it makes the performance possible.</p>
+
+<h2 id="what-practice-looks-like-for-builders">What Practice Looks Like for Builders</h2>
+
+<p>For people who build things—code, designs, systems, products—practice might include:</p>
+
+<ul>
+  <li>Coding katas or small exercises focused on technique</li>
+  <li>Rebuilding familiar projects with new approaches</li>
+  <li>Studying and recreating excellent work from others</li>
+  <li>Writing throwaway prototypes to explore ideas</li>
+  <li>Refactoring old code for the learning, not the outcome</li>
+  <li>Reading documentation and implementing examples</li>
+</ul>
+
+<p><em>More content coming soon…</em></p>]]></content><author><name>gmansims</name></author><category term="meta" /><summary type="html"><![CDATA[Note, this is under construction. Coming soon!]]></summary></entry><entry><title type="html">A Clean Scorecard for Projects</title><link href="http://localhost:4000/posts/clean-scorecard-for-projects/" rel="alternate" type="text/html" title="A Clean Scorecard for Projects" /><published>2026-01-28T00:00:00-05:00</published><updated>2026-01-28T00:00:00-05:00</updated><id>http://localhost:4000/posts/clean-scorecard-for-projects</id><content type="html" xml:base="http://localhost:4000/posts/clean-scorecard-for-projects/"><![CDATA[<p>Every golfer keeps a scorecard. It’s simple: 18 holes, par for each hole, your score for each hole. At the end of the round, you know exactly how you did.</p>
+
+<p>Projects should work the same way. But instead, we often start with vague goals, shift priorities mid-stream, and finish without knowing if we succeeded.</p>
+
+<h2 id="the-three-elements-of-a-good-scorecard">The Three Elements of a Good Scorecard</h2>
+
+<p>A golf scorecard has three critical elements that make it useful:</p>
+
+<h3 id="1-clear-par-the-expected-outcome">1. Clear Par (The Expected Outcome)</h3>
+
+<p>Before you play a hole, you know what par is. You know a birdie is good, a bogey is slightly off, and a double bogey means something went wrong.</p>
+
+<p>Your project needs the same clarity. What does success look like? What’s good enough? What’s exceptional? Define par before you start.</p>
+
+<h3 id="2-visible-constraints">2. Visible Constraints</h3>
+
+<p>On a scorecard, you can see the hole’s distance, the hazards, the difficulty rating. You know what you’re working with.</p>
+
+<p>Projects need visible constraints too: timeline, budget, team size, technical limitations. Make them explicit. Write them down. Keep them visible.</p>
+
+<h3 id="3-honest-scoring">3. Honest Scoring</h3>
+
+<p>In golf, you count every stroke. No gimmes on the scorecard. This honesty is what makes the score meaningful.</p>
+
+<p>In projects, be honest about progress. Don’t round “almost done” up to “done.” Don’t hide the extra time spent debugging. Track the actual effort, not the ideal effort.</p>
+
+<h2 id="a-simple-project-scorecard-template">A Simple Project Scorecard Template</h2>
+
+<p>Here’s a lightweight framework you can adapt:</p>
+
+<ul>
+  <li><strong>Goal:</strong> What are we building? (One clear sentence)</li>
+  <li><strong>Par:</strong> What does success look like?</li>
+  <li><strong>Constraints:</strong> Time, budget, team, tech stack</li>
+  <li><strong>Hazards:</strong> Known risks and dependencies</li>
+  <li><strong>Score:</strong> How are we tracking? (Update weekly)</li>
+</ul>
+
+<h2 id="reviewing-your-scorecard">Reviewing Your Scorecard</h2>
+
+<p>At the end of a golf round, you review your scorecard. You see which holes went well and which didn’t. You learn.</p>
+
+<p>Do the same with projects. When you finish (or abandon) a project, review the scorecard:</p>
+
+<ul>
+  <li>Did we hit par? Why or why not?</li>
+  <li>Which constraints held? Which changed?</li>
+  <li>Which hazards materialized? Which didn’t?</li>
+  <li>What would we do differently next time?</li>
+</ul>
+
+<h2 id="keep-it-simple">Keep It Simple</h2>
+
+<p>A golf scorecard fits on a single piece of paper. It’s not a detailed analysis—it’s a tracking tool.</p>
+
+<p>Your project scorecard should be the same. One page. Clear. Visible. Updated regularly. If it takes more than five minutes to update, it’s too complex.</p>
+
+<p>The goal isn’t perfect planning. It’s having enough structure to know where you stand and whether you’re moving in the right direction.</p>]]></content><author><name>gmansims</name></author><category term="planning" /><category term="process" /><summary type="html"><![CDATA[A lightweight framework to keep goals, constraints, and outcomes visible.]]></summary></entry><entry><title type="html">Fairways and Focus: Deep Work in Short Blocks</title><link href="http://localhost:4000/posts/fairways-and-focus/" rel="alternate" type="text/html" title="Fairways and Focus: Deep Work in Short Blocks" /><published>2026-01-15T00:00:00-05:00</published><updated>2026-01-15T00:00:00-05:00</updated><id>http://localhost:4000/posts/fairways-and-focus</id><content type="html" xml:base="http://localhost:4000/posts/fairways-and-focus/"><![CDATA[<p>In golf, a round is played in discrete units: 18 holes. Each hole is its own challenge with a clear beginning and end. You can’t play hole 14 while standing on hole 7.</p>
+
+<p>This structure creates natural focus. For the 5-15 minutes you’re playing a hole, that’s all you’re doing. Then you move to the next one.</p>
+
+<h2 id="the-problem-with-open-ended-time">The Problem with Open-Ended Time</h2>
+
+<p>Most knowledge work has no holes. We have “work time”—an open field where everything blurs together. We start writing code, get a Slack message, review a document, return to code, check email, and wonder why we’re exhausted without making progress.</p>
+
+<p>This isn’t deep work. It’s wandering in the rough, hoping to stumble toward the green.</p>
+
+<h2 id="design-your-week-like-a-golf-course">Design Your Week Like a Golf Course</h2>
+
+<p>What if you structured your week like 18 holes? Discrete blocks of time, each with a clear purpose and end point.</p>
+
+<p>Here’s what that might look like:</p>
+
+<ul>
+  <li><strong>90-minute blocks:</strong> Deep work on a single project or problem</li>
+  <li><strong>30-minute blocks:</strong> Code review, feedback, collaborative work</li>
+  <li><strong>15-minute blocks:</strong> Quick decisions, admin tasks, planning</li>
+  <li><strong>Clear transitions:</strong> Brief pause between blocks (like walking to the next tee)</li>
+</ul>
+
+<h2 id="staying-on-the-fairway">Staying on the Fairway</h2>
+
+<p>In golf, the fairway is the ideal path. It’s cut short, clear of obstacles, designed to let you make your next shot.</p>
+
+<p>In work, staying on the fairway means:</p>
+
+<ul>
+  <li>Protecting your focus blocks from interruptions</li>
+  <li>Saying no to tasks that don’t fit your current hole</li>
+  <li>Batching similar work together</li>
+  <li>Having a clear definition of “done” for each block</li>
+</ul>
+
+<h2 id="when-you-end-up-in-the-rough">When You End Up in the Rough</h2>
+
+<p>Even professional golfers miss fairways. When they do, they don’t try to hit a miracle shot through the trees. They pitch back to the fairway and continue from there.</p>
+
+<p>Same with work. When a focus block gets derailed:</p>
+
+<ol>
+  <li>Acknowledge it happened (don’t pretend you’re still focused)</li>
+  <li>Finish the interruption or capture it for later</li>
+  <li>Take a brief reset break (walk, water, window)</li>
+  <li>Return to your block with fresh attention</li>
+</ol>
+
+<p>Don’t try to muscle through distraction. Get back to the fairway first.</p>
+
+<h2 id="short-blocks-clear-outcomes">Short Blocks, Clear Outcomes</h2>
+
+<p>You don’t need four-hour marathon sessions to do deep work. A focused 90 minutes beats a distracted half-day every time.</p>
+
+<p>The key is matching the block to the task:</p>
+
+<ul>
+  <li>Architecture decisions: 90 minutes</li>
+  <li>Feature implementation: 90 minutes</li>
+  <li>Bug investigation: 60 minutes</li>
+  <li>Code review: 30 minutes</li>
+  <li>Team sync: 15 minutes</li>
+</ul>
+
+<h2 id="building-the-habit">Building the Habit</h2>
+
+<p>Start with one deep work block per day. Same time, same type of work, same duration. Build the routine until it becomes automatic.</p>
+
+<p>Then add a second block. Then a third. Like learning to play golf—you don’t start by playing 18 holes. You practice one swing at a time.</p>
+
+<p>The goal is simple: design your week so your attention stays on the fairway, not wandering in the rough.</p>]]></content><author><name>gmansims</name></author><category term="focus" /><category term="deep-work" /><summary type="html"><![CDATA[Designing your week so attention stays on the fairway, not the rough.]]></summary></entry></feed>
