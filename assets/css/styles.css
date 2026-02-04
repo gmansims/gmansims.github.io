@@ -287,15 +287,12 @@ a {
   transform-origin: left;
 }
 
-/* Decorative drop cap for card paragraphs */
+/* Subtle drop cap for card paragraphs */
 .card p:first-of-type::first-letter {
   font-family: "Fraunces", serif;
-  font-size: 3.5em;
+  font-size: 1.8em;
   font-weight: 600;
-  float: left;
-  line-height: 0.8;
-  margin: 0.1em 0.1em 0 0;
-  color: var(--gold);
+  color: var(--masters-green);
 }
 
 .list {
