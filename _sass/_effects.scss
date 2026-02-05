@@ -1,0 +1,49 @@
+// Interactive effects and animations
+
+// Green Jacket scroll progress indicator
+body::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 0%;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--masters-green) 10%, var(--pine-deep) 100%);
+  box-shadow: 2px 0 8px rgba(15, 61, 46, 0.3);
+  z-index: 1000;
+  transition: height 0.1s ease-out;
+}
+
+body.scrolled::before {
+  height: var(--scroll-progress, 0%);
+}
+
+// Reading progress bar at top
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-shine) 50%, var(--gold) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .sidebar,
+  .content {
+    transform: none !important;
+  }
+}

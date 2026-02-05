@@ -1,0 +1,57 @@
+// Page layout and grid structure
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  perspective: 1000px; // For parallax
+}
+
+// Sidebar
+.sidebar {
+  padding: 36px 28px;
+  background: linear-gradient(180deg, var(--masters-green) 0%, var(--pine-deep) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.side-note {
+  margin-top: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 18px;
+}
+
+// Main content area
+.content {
+  padding: 48px 60px 60px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+// Responsive layout
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-radius: 0 0 24px 24px;
+  }
+
+  .content {
+    padding: 36px 24px 48px;
+  }
+
+  // Disable parallax on mobile
+  .sidebar,
+  .content {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,13 @@
+---
+# Front matter required for Jekyll to process Sass
+---
+
+// The Dad Stack - Masters-Inspired Blog Styles
+// Organized using Sass partials for maintainability
+
+// Import all partials
+@import "variables";
+@import "base";
+@import "layout";
+@import "components";
+@import "effects";
