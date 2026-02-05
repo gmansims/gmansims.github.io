@@ -22,6 +22,72 @@ The project uses GitHub Actions for CI/CD validation:
 
 There are no unit tests - validation focuses on the build output.
 
+## Testing Before Commits
+
+Always run tests before committing changes to ensure the site builds correctly.
+
+### For Code Changes (layouts, CSS, JavaScript, configuration)
+```bash
+bundle exec jekyll build          # Verify site builds without errors
+bundle exec jekyll serve          # Visually inspect changes at http://localhost:4000
+```
+
+### For Content Changes (new posts, page updates)
+```bash
+bundle exec jekyll build          # Ensure post front matter is valid
+```
+
+### What to Check
+- Build completes without errors or warnings
+- Site renders correctly in the browser (for code changes)
+- Navigation links work as expected
+- No broken internal links
+- Responsive design works on mobile and desktop viewports
+
+Documentation-only changes (like CLAUDE.md, README.md) don't require build validation.
+
+## Commit Message Format
+
+Use conventional commit format for all commits:
+
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+### Types
+- `feat`: New feature or enhancement
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: CSS/styling changes (or code formatting that doesn't affect functionality)
+- `refactor`: Code restructuring without changing behavior
+- `chore`: Build process, dependencies, or tooling changes
+
+### Examples
+```
+feat(posts): add reading time calculation
+
+docs: add CLAUDE.md with codebase guidance
+
+fix(sidebar): correct active state on Topics page
+
+style(css): update drop cap styling for better readability
+
+chore(deps): update Jekyll to 3.9.3
+```
+
+### Scope
+Optional but recommended. Common scopes:
+- `posts` - Blog post changes
+- `layout` - Template/layout changes
+- `css` or `styles` - Styling changes
+- `js` or `scripts` - JavaScript changes
+- `ci` - CI/CD workflow changes
+- `config` - Jekyll configuration changes
+
 ## Architecture
 
 ### Template Hierarchy
