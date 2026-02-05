@@ -124,7 +124,7 @@ Reusable components in `_includes/`:
   ```
 - Categories automatically populate the Topics page
 - Posts auto-generate excerpts if not provided
-- Reading time should be calculated manually (assume ~200 words per minute)
+- Reading time is calculated automatically using 250 words per minute (industry standard)
 
 ### Frontend Architecture
 
@@ -147,6 +147,11 @@ Reusable components in `_includes/`:
 - Dynamic scorecard stats (article/topic/reader counts)
 - All animations respect `prefers-reduced-motion` for accessibility
 - Uses `requestAnimationFrame` for 60fps performance
+
+**Accessibility Notes**
+- Golf flag emoji (⚑) in navigation is a CSS ::before pseudo-element and cannot receive ARIA attributes
+- Active navigation state is also indicated by font weight for accessibility
+- Color contrast meets WCAG AA standards (meta text: #5a6560)
 
 ### Jekyll Plugins
 - `jekyll-feed` - RSS feed at `/feed.xml`

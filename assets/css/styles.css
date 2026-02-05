@@ -138,6 +138,9 @@ a {
   font-weight: 600;
 }
 
+/* Golf flag indicator for active navigation item
+   Note: CSS pseudo-elements cannot receive ARIA attributes.
+   The flag is decorative - active state is also indicated by bold font weight. */
 .nav a.active::before {
   content: '⚑';
   color: var(--gold);
@@ -240,7 +243,7 @@ a {
   font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #6b7b73;
+  color: #5a6560; /* Darkened for WCAG AA compliance */
 }
 
 .card {
@@ -293,6 +296,12 @@ a {
   font-size: 1.8em;
   font-weight: 600;
   color: var(--masters-green);
+}
+
+@media (max-width: 600px) {
+  .card p:first-of-type::first-letter {
+    font-size: 1.4em;
+  }
 }
 
 .list {
