@@ -27,7 +27,7 @@ layout: default
 <section class="post-list">
   {% for post in site.posts limit:10 %}
     <article class="post">
-      {% assign words = post.content | number_of_words %}{% assign mins = words | plus: 199 | divided_by: 200 %}
+      {% assign words = post.content | number_of_words %}{% assign mins = words | plus: 249 | divided_by: 250 %}
       <div class="meta">{{ post.date | date: "%b %-d, %Y" }} · {{ mins }} min read</div>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p>

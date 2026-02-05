@@ -17,7 +17,7 @@ bundle exec jekyll build          # Build static site to _site/
 
 ### Testing
 The project uses GitHub Actions for CI/CD validation:
-- **HTML validation**: `htmlproofer` checks generated HTML for broken links and accessibility
+- **HTML validation**: `htmlproofer` performs basic HTML validation and checks for broken links (note: ignores missing alt text, so not comprehensive accessibility testing)
 - **Claude Code Review**: Automated PR reviews check for HTML/CSS issues, broken links, and typos
 
 There are no unit tests - validation focuses on the build output.
@@ -124,16 +124,18 @@ Reusable components in `_includes/`:
   ```
 - Categories automatically populate the Topics page
 - Posts auto-generate excerpts if not provided
-- Reading time should be calculated manually (assume ~200 words per minute)
+- Reading time is calculated automatically using 250 words per minute (industry standard)
 
 ### Frontend Architecture
 
 **Styling (assets/css/styles.css)**
 - Masters-themed color palette using CSS custom properties:
-  - `--primary`: Deep green (#0f3d2e)
-  - `--accent-gold`: (#d4af37)
-  - `--accent-azalea`: Pink (#f4a6b0)
-  - `--background`: Cream (#f9f5ef)
+  - `--masters-green`: Deep green (#0f3d2e)
+  - `--gold`: Gold (#d4af37)
+  - `--azalea`: Pink (#f4a6b0)
+  - `--cream`: Cream (#f9f5ef)
+  - `--ink`: Text black (#1f2a24)
+  - Plus expanded palette: `--pine-deep`, `--pine-light`, `--fairway`, `--morning-mist`, `--azalea-light`, `--gold-shine`, `--gold-dark`, `--water-blue`, `--sand`
 - Typography: Fraunces (serif) for headings, Manrope (sans-serif) for body
 - CSS Grid for main layout (sidebar + content), responsive breakpoint at 900px
 - No CSS framework - all custom styles
@@ -145,6 +147,11 @@ Reusable components in `_includes/`:
 - Dynamic scorecard stats (article/topic/reader counts)
 - All animations respect `prefers-reduced-motion` for accessibility
 - Uses `requestAnimationFrame` for 60fps performance
+
+**Accessibility Notes**
+- Golf flag emoji (⚑) in navigation is a CSS ::before pseudo-element and cannot receive ARIA attributes
+- Active navigation state is also indicated by font weight for accessibility
+- Color contrast meets WCAG AA standards (meta text: #5a6560)
 
 ### Jekyll Plugins
 - `jekyll-feed` - RSS feed at `/feed.xml`
