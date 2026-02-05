@@ -104,10 +104,13 @@ Reusable components in `_includes/`:
 ### Configuration-Driven Behavior
 `_config.yml` is the single source of truth for:
 - Site metadata (title, subtitle, author, URL)
-- Navigation links (auto-generates sidebar)
 - Plugin configuration (SEO, sitemap, RSS feed)
 - Front matter defaults (all posts use `post` layout by default)
 - Permalink structure (`/posts/:title/`)
+
+### Data Files
+`_data/` directory contains structured data:
+- `navigation.yml`: Site navigation menu (auto-generates sidebar with active states)
 
 ### Content Management
 - Posts live in `_posts/` with naming: `YYYY-MM-DD-title.md`
@@ -128,7 +131,14 @@ Reusable components in `_includes/`:
 
 ### Frontend Architecture
 
-**Styling (assets/css/styles.css)**
+**Styling (Sass architecture)**
+- Organized using Sass partials in `_sass/`:
+  - `_variables.scss`: CSS custom properties, color palette, shadows, font imports
+  - `_base.scss`: Resets, body styles, links, focus states
+  - `_layout.scss`: Page grid, sidebar, content area, responsive breakpoints
+  - `_components.scss`: UI components (nav, cards, scorecard, forms, etc.)
+  - `_effects.scss`: Scroll progress, parallax setup, reduced motion
+- Main file: `css/styles.scss` imports all partials
 - Masters-themed color palette using CSS custom properties:
   - `--masters-green`: Deep green (#0f3d2e)
   - `--gold`: Gold (#d4af37)
@@ -138,7 +148,6 @@ Reusable components in `_includes/`:
   - Plus expanded palette: `--pine-deep`, `--pine-light`, `--fairway`, `--morning-mist`, `--azalea-light`, `--gold-shine`, `--gold-dark`, `--water-blue`, `--sand`
 - Typography: Fraunces (serif) for headings, Manrope (sans-serif) for body
 - CSS Grid for main layout (sidebar + content), responsive breakpoint at 900px
-- No CSS framework - all custom styles
 
 **Interactive Features (assets/js/script.js)**
 - Green jacket scroll progress indicator (left edge)
@@ -161,7 +170,12 @@ Reusable components in `_includes/`:
 ## Important Patterns
 
 ### Adding Navigation Links
-Edit the `navigation` array in `_config.yml` - changes automatically reflect in sidebar with active state handling.
+Edit `_data/navigation.yml` to add or modify navigation items:
+```yaml
+- title: New Page
+  url: /new-page/
+```
+Changes reflect immediately during `jekyll serve` (no restart required). Navigation automatically handles active states.
 
 ### Creating New Posts
 1. Create file: `_posts/YYYY-MM-DD-title.md`

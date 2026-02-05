@@ -7,7 +7,7 @@
     </div>
   </div>
   <nav class="nav">
-    {% for item in site.navigation %}
+    {% for item in site.data.navigation %}
       <a {% if page.url == item.url %}class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.title }}</a>
     {% endfor %}
   </nav>
