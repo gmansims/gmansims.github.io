@@ -6,6 +6,7 @@
 // Performance optimization: use single requestAnimationFrame for all scroll effects
 let ticking = false;
 let scrollY = 0;
+let progressBar = null;
 
 /**
  * Feature 1: Green Jacket Scroll Progress Indicator
@@ -89,28 +90,12 @@ function handleResize() {
 
 /**
  * Update scorecard stats dynamically
+ * Note: Jekyll templates handle the actual calculations.
+ * This function is preserved for potential future enhancements.
  */
 function updateScorecardStats() {
-  const scorecard = document.querySelector('.scorecard');
-  if (!scorecard) return;
-
-  // Count actual articles on the page
-  const articleCount = document.querySelectorAll('.post').length;
-
-  // Update the articles number
-  const articlesNumber = scorecard.querySelector('.scorecard-number');
-  if (articlesNumber) {
-    articlesNumber.textContent = articleCount;
-  }
-
-  // For now, set topics to 0 and hide readers until we have real data
-  const scorecardItems = scorecard.querySelectorAll('.scorecard-item');
-  if (scorecardItems.length >= 2) {
-    scorecardItems[1].querySelector('.scorecard-number').textContent = '0';
-  }
-  if (scorecardItems.length >= 3) {
-    scorecardItems[2].querySelector('.scorecard-number').textContent = '0';
-  }
+  // Scorecard values are calculated by Jekyll templates
+  // No dynamic updates needed at this time
 }
 
 /**
@@ -118,7 +103,7 @@ function updateScorecardStats() {
  */
 function init() {
   // Create progress bar element
-  window.progressBar = createProgressBar();
+  progressBar = createProgressBar();
 
   // Update scorecard with dynamic stats
   updateScorecardStats();
@@ -153,10 +138,3 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   }
 }
 
-/**
- * Debug logging (can be removed in production)
- */
-console.log('🏌️ Masters-inspired blog features loaded');
-console.log('✓ Green Jacket scroll progress');
-console.log('✓ Reading progress bar');
-console.log('✓ Rolling hills parallax');
